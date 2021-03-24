@@ -210,15 +210,37 @@ int quicksort(int *arr, int left, int right, int len) //once again, adds a few m
 int main(int argc, char *argv[])
 {
 	int size = atoi(argv[1]);
+	int mode = atoi(argv[2]);
 	int *arr_ptr = (int*) malloc(size*sizeof(int));
 	window.setFramerateLimit(60);
 	randfill(arr_ptr, size, 1, 1000);
+	switch(mode)
+	{
+		case 1:
+			bubble_sort(arr_ptr, size);
+			break;
+		case 2:
+			selection_sort(arr_ptr, size);
+			break;
+		case 3:
+			insertion_sort(arr_ptr, size);
+			break;
+		case 4:
+			merge_sort(arr_ptr, 0, size-1, size);
+			break;
+		case 5:
+			quicksort(arr_ptr, 0, size, size);
+			break;
+		default:
+			cout << "\nwrong argument\n";
+
+	}
 	//bubble_sort(arr_ptr, size);
 	//selection_sort(arr_ptr, size);
 	//insertion_sort(arr_ptr, size);
 	//merge_sort(arr_ptr, 0, size-1, size);
-	quicksort(arr_ptr, 0, size, size);
-	text_display(arr_ptr, size);
+	//quicksort(arr_ptr, 0, size, size);
+	//text_display(arr_ptr, size);
 	while (window.isOpen())
 	{
 		sf::Event event;
