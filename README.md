@@ -6,5 +6,10 @@ Install SFML, then compile the code with the following:
 `g++ -c sort.cpp && g++ sort.o -o sort -lsfml-graphics -lsfml-window -lsfml-system`  
 the program takes two command line arguments:  
 -An integer for the size of the list to sort  
--An integer between 1 and 5 for the algorithm to apply  
+-An integer between 1 and 5 for the algorithm to apply:  
+1: Bubble sort  
+2: Selection sort  
+3: Insertion sort  
+4: Merge sort  
+5: Quicksort  
 `./sort [SIZE] [ALGORITHM]`  
