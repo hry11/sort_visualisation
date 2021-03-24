@@ -4,5 +4,7 @@ Nothing Very fancy or user-friendly, the code isn't mind-blowingly efficient (so
 **ON LINUX**  
 Install SFML, then compile the code with the following:  
 `g++ -c sort.cpp && g++ sort.o -o sort -lsfml-graphics -lsfml-window -lsfml-system`  
-the program takes one command line argument for the size of the list to sort.  
-`./sort [SIZE]`  
+the program takes two command line arguments:  
+-An integer for the size of the list to sort  
+-An integer between 1 and 5 for the algorithm to apply  
+`./sort [SIZE] [ALGORITHM]`  
